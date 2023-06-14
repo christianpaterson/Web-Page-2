@@ -1,0 +1,44 @@
+/* #link-container {
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+} */
+
+#middle-container {
+  height: 400px;
+}
+
+h2 {
+  color: #194999;
+}
+
+span {
+  margin-left: 5px;
+  color: #194999;
+}
+
+a {
+  text-decoration: none;
+  color: #a786df;
+}
+
+.link-div {
+  margin: 20px 0;
+}
+
+hr {
+  margin: 25px 0;
+}
+
+button {
+  background-color: #ffddff;
+  color: #194999;
+  margin: 5px 0;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+}
+
+button:hover {
+  cursor: pointer;
+}
