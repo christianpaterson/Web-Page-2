@@ -1,4 +1,4 @@
-var companyname4 = "Echoes of Innovation CDs";
+var companyname4 = "Echoes of Innovation dvds";
 var address4 = "269 Main St. Valencia, CA 91344";
 var phonenumber5 = "(555) 861-1234";
 
