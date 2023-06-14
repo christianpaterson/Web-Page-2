@@ -2,9 +2,7 @@
 var companyname4 = "Echoes of Innovation dvds";
 var address4 = "269 Main St. Valencia, CA 91344";
 var phonenumber5 = "(555) 861-1234";
-var product1 = { name:"HP 4426", id:"4426", desc:"Newest and Best Laptop from HP Computer"};
-var product2 = { name:"Apple 88123 iPad", id:"88123", desc:"Apple Tablet Computer"};
-var product3 = { name:"Dell Dimension 2400", id:"2400X", desc:"A fast 2.4 ghz computer"};
+var imgurl797 = 'http://www.college1.com/images/';
 
 
 const headerContainer = document.getElementById('head269');
@@ -56,7 +54,7 @@ function makeMain2(myproduct) {
     <h5>Product ID: ${myproduct.id}</h5><br>
     <h5>Product Description: ${myproduct.desc}</h5><br>
     <h5>Shopping Cart Link Bar </h5><br>
-    <h5>Product Image: </h5><br>
+    <h5>Product Image: ${imgurl797}${myproduct}</h5><br>
   `;
 }
 
@@ -77,3 +75,15 @@ product2Btn.addEventListener('click', function() {
 product3Btn.addEventListener('click', function() {
   execButton453(product3);
 });
+
+
+//Lab Assignment #10
+var cardimgurl247 = 'http://www.college1.com/images/cards/gbCard';
+
+var cardurl = cardimgurl247 + cardnumber + '.gif';
+// where cardnumber is 0 to 51 for a face up card and 52 for the back
+// insert cardurl into an img tag to display cards, DO NOT forget id='cardX'
+
+function dealCards412() {
+
+}
