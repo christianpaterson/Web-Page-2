@@ -6,10 +6,15 @@ var product1 = { name:"HP 4426", id:"4426", desc:"Newest and Best Laptop from HP
 var product2 = { name:"Apple 88123 iPad", id:"88123", desc:"Apple Tablet Computer"};
 var product3 = { name:"Dell Dimension 2400", id:"2400X", desc:"A fast 2.4 ghz computer"};
 
+
 const headerContainer = document.getElementById('head269');
 const footerContainer = document.getElementById('foot861');
 const menuContainer = document.getElementById('menu933');
 const mainContainer = document.getElementById('main718');
+const product1Btn = document.getElementById('product1Btn');
+const product2Btn = document.getElementById('product2Btn');
+const product3Btn = document.getElementById('product3Btn');
+
 
 function getHeader() {
   headerContainer.innerHTML = `
@@ -37,16 +42,15 @@ getFooter(companyname4, address4, phonenumber5);
 
 // Lab Assignment #8 & 9
 function makeMenu4(size) {
-  let string = "My Menu: ";
-  for(let i = 0; i < size; i++) {
-    string += "Button "; 
-  }
-  menuContainer.innerHTML += string;
-  return string;
+  menuContainer.innerHTML += `
+
+  `;
 }
 
+
+
 function makeMain2(myproduct) {
-  mainContainer.innerHTML += `
+  mainContainer.innerHTML = `
     <h2>My Product: </h2><br>
     <h3>Product Name: ${myproduct.name}</h3><br>
     <h5>Product ID: ${myproduct.id}</h5><br>
@@ -56,9 +60,20 @@ function makeMain2(myproduct) {
   `;
 }
 
-makeMenu4(4);
-makeMain2(product1);
-makeMain2(product2);
-makeMain2(product3);
+
+function execButton453(productObject) {
+  makeMain2(productObject);
+}
 
 
+product1Btn.addEventListener('click', function() {
+  execButton453(product1);
+});
+
+product2Btn.addEventListener('click', function() {
+  execButton453(product2);
+});
+
+product3Btn.addEventListener('click', function() {
+  execButton453(product3);
+});
