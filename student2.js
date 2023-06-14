@@ -1,6 +1,6 @@
-const companyname4 = "Echoes of Innovation";
-const address4 = "269 Main St. Valencia, CA 91344";
-const phonenumber5 = "(555) 861-1234";
+var companyname4 = "Echoes of Innovation";
+var address4 = "269 Main St. Valencia, CA 91344";
+var phonenumber5 = "(555) 861-1234";
 
 const headerContainer = document.getElementById('head269');
 const footerContainer = document.getElementById('foot861');
