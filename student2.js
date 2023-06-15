@@ -82,10 +82,6 @@ product3Btn.addEventListener('click', function() {
 
 
 //Lab Assignment #10
-
-
-var imgurl797 = 'http://www.college1.com/images/';   // global
-// . . . 
 var produrl = imgurl797 + myproduct.id + '.gif';  // local
 // creates string containing 'http://www.college1.com/images/4426.gif'
 // insert produrl into the display of product1
