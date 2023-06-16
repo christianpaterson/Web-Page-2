@@ -89,10 +89,10 @@ var cardurl = cardimgurl247 + cardnumber + '.gif';
 // where cardnumber is 0 to 51 for a face up card and 52 for the back
 // insert cardurl into an img tag to display cards, DO NOT forget id='cardX'
 
-var cardnum779 = -1;
+var cardnum779 = '-1';
 
 function hitCard870() {
-  
+
 }
 
 function dealCards412() {
