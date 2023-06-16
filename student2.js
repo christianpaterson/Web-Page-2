@@ -1,13 +1,17 @@
 // Lab Assignment #7
-var companyname4 = "Echoes of Innovation dvds";
+var companyname4 = "Echoes of Innovation DVDs";
 var address4 = "269 Main St. Valencia, CA 91344";
 var phonenumber5 = "(555) 861-1234";
 var imgurl797 = 'http://www.college1.com/images/';
 var cardimgurl247 = 'http://www.college1.com/images/cards/gbCard';
 
-var product1 = { name:"HP 4426", id:"4426", desc:"Newest and Best Laptop from HP Computer", img:'assets/boombox.jpg'};
-var product2 = { name:"Apple 88123 iPad", id:"88123", desc:"Apple Tablet Computer"};
-var product3 = { name:"Dell Dimension 2400", id:"2400X", desc:"A fast 2.4 ghz computer"};
+// var product2 = { name: "Roland TR-808", id: "tr808", desc: "Legendary drum machine that revolutionized electronic music", img: "assets/drum_machine.jpg" };
+// var product3 = { name: "Technics SL-1200", id: "sl1200", desc: "Classic turntable known for its exceptional performance and durability", img: "assets/retro_turntable.jpg" };
+
+var product1 = { name: "Oldies CD Collection", id: "oldiescd", desc: "A curated collection of classic hits from the '50s and '60s", img: "assets/cds-side.jpg" };
+var product2 = { name: "Boombox", id: "boombox", desc: "Vintage-style portable stereo system with built-in speakers", img: "assets/boombox.jpg" };
+var product3 = { name: "VR Headset", id: "vrheadset", desc: "Cutting-edge virtual reality headset for immersive gaming and experiences", img: "assets/kid_headset_resized.jpg" };
+
 
 const headerContainer = document.getElementById('head269');
 const footerContainer = document.getElementById('foot861');
@@ -20,21 +24,17 @@ const product3Btn = document.getElementById('product3Btn');
 
 function getHeader() {
   headerContainer.innerHTML = `
-  <div>
-    <h1>${companyname4}</h1>
-    <h3>${address4}</h3>
-    <h3>${phonenumber5}</h3>
-  </div>
+    <div>
+      <h5>${companyname4} - ${address4} - ${phonenumber5}</h5>
+    </div>
   `;
 }
 
 function getFooter(name, address, phone) {
   footerContainer.innerHTML = `
-  <div>
-    <h5>${name}</h5>
-    <h6>${address}</h6>
-    <h6>${phone}</h6>
-  </div>
+    <div>
+      <h5>${name} - ${address} - ${phone}</h5>
+    </div>
   `;
 }
 
@@ -52,17 +52,15 @@ function makeMenu4(size) {
 
 function makeMain2(myproduct) {
   var produrl = imgurl797 + myproduct.id + '.gif';  // local
+  
   mainContainer.innerHTML = `
-    <h2>My Product: </h2><br>
-    <h3>Product Name: ${myproduct.name}</h3><br>
-    <h5>Product ID: ${myproduct.id}</h5><br>
-    <h5>Product Description: ${myproduct.desc}</h5><br>
-    <h5>Shopping Cart Link Bar </h5><br>
-    <h5>Product Image:<br>
-      <img src="${myproduct.img}" width="500">
-      <img src="${produrl}" width="500">
-    </h5><br>
+    <h3>${myproduct.name}</h3><br>
+    <img src="${myproduct.img}" width="500">
+    <h6>Product ID: ${myproduct.id}</h6>
+    <h5>Product Description: ${myproduct.desc}</h5>
+    <h5 id="linkbar"></h5><br>
   `;
+  makeLinkBar881();
 }
 
 
@@ -98,3 +96,26 @@ function hitCard870() {
 function dealCards412() {
 
 }
+
+
+
+function makeLinkBar881() {
+  let linkBar = document.querySelector('#linkbar');
+  linkBar.innerHTML = `
+    <form target='paypal' action='https://www.paypal.com/cgi-bin/webscr' method='post'>
+      <input type='hidden' name='business' value=‘’>
+      <input type='hidden' name='cmd' value='_cart'>
+      <input type='hidden' name='add' value='1'>
+      <input type='hidden' name='item_name' value=''>
+      <input type='hidden' name='amount' value=’20’>
+      <input type='hidden' name='currency_code' value='USD'>
+      <input id="add-to-cart" type='image' name='submit'
+        src='https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif'
+        alt='Add to Cart'>
+      <img alt='' width='1' height='1'
+        src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif'>
+    </form>
+  `;
+}
+
+makeLinkBar881();
