@@ -110,10 +110,7 @@ makeLinkBar881();
 
 var adnum409 = 1;
 
-
-
 function popupAd536() {
-
 
   var winobj373 = -1;
   if(winobj373 < 2) {
@@ -122,8 +119,6 @@ function popupAd536() {
     winobj373 = -1;
   }
 
-
-  
   var adContents = [
   `
     <html>
