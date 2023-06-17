@@ -4,6 +4,8 @@ var address4 = "269 Main St. Valencia, CA 91344";
 var phonenumber5 = "(555) 861-1234";
 var imgurl797 = 'http://www.college1.com/images/';
 var cardimgurl247 = 'http://www.college1.com/images/cards/gbCard';
+var adnum409 = 1;
+var winobj373 = -1;
 
 // var product2 = { name: "Roland TR-808", id: "tr808", desc: "Legendary drum machine that revolutionized electronic music", img: "assets/drum_machine.jpg" };
 // var product3 = { name: "Technics SL-1200", id: "sl1200", desc: "Classic turntable known for its exceptional performance and durability", img: "assets/retro_turntable.jpg" };
@@ -105,6 +107,7 @@ function makeLinkBar881() {
 
 // Lab Assignment #13
 var adnum409 = 1;
+var winobj373 = -1;
 
 function popupAd536() {
 
@@ -163,7 +166,7 @@ function closeAd536() {
 
 
 // Lab Assignment #13
-function makeForm() {
+function makeForm835() {
 
 }
 
