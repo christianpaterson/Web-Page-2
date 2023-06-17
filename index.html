@@ -65,11 +65,16 @@
     <div class="container">
       <h2>Contact Us</h2>
       <div id='foot861'></div>
-      <form>
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea placeholder="Message"></textarea>
+      <form id="contact-form">
+        <input type="text" id="name" name="name" placeholder="Your Name">
+        <input type="email" id="email" name="email" placeholder="Your Email">
+        <input type="text" id="address" name="address" placeholder="Address">
+        <input type="text" id="city" name="city" placeholder="City">
+        <input type="text" id="state" name="state" placeholder="State">
+        <input type="text" id="zip" name="zip" placeholder="Zip">
+        <textarea placeholder="Message" id="message" name="message"></textarea>
         <input type="submit" value="Send Message" class="btn">
+        <input type="hidden" name="send_email" value="cwpaterson@my.canyons.edu">
       </form>
     </div>
   </section>

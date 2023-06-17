@@ -103,11 +103,7 @@ function makeLinkBar881() {
   `;
 }
 
-makeLinkBar881();
-
-
 // Lab Assignment #13
-
 var adnum409 = 1;
 
 function popupAd536() {
@@ -163,4 +159,79 @@ adWindow.document.close();
 
 function closeAd536() {
   adWindow.document.close();
+}
+
+
+// Lab Assignment #13
+function makeForm() {
+
+}
+
+var form = document.querySelector("#contact-form");
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  if (checkForm804()) {
+    var formData = new FormData(form);
+    
+    fetch("http://www.college1.com/classes/javascript/survey.php", {
+      method: "POST",
+      body: formData
+    })
+    .then(function(response) {
+      // Handle the response from the server if needed
+    })
+    .catch(function(error) {
+      // Handle any error that occurs during the request
+    });
+  }
+});
+
+function checkForm804() {
+    var nameInput = document.getElementById("name");
+    var emailInput = document.getElementById("email");
+    var addressInput = document.getElementById("address");
+    var cityInput = document.getElementById("city");
+    var stateInput = document.getElementById("state");
+    var zipInput = document.getElementById("zip");
+    var messageInput = document.getElementById("message");
+    
+    var missingFields = [];
+    
+    if (nameInput.value.trim() === "") {
+      missingFields.push("name");
+    }
+    
+    if (emailInput.value.trim() === "") {
+      missingFields.push("email");
+    }
+    
+    if (addressInput.value.trim() === "") {
+      missingFields.push("address");
+    }
+    
+    if (cityInput.value.trim() === "") {
+      missingFields.push("city");
+    }
+    
+    if (stateInput.value.trim() === "") {
+      missingFields.push("state");
+    }
+    
+    if (zipInput.value.trim() === "") {
+      missingFields.push("zip");
+    }
+
+    if (messageInput.value.trim() === "") {
+      missingFields.push("message");
+    }
+    
+    if (missingFields.length > 0) {
+      alert("Please fill in the following fields:\n\n" + missingFields.join(", "));
+      return false; // Cancel form submission
+    }
+    
+    // Form validation passed, submit the form
+    return true;
 }
