@@ -82,22 +82,7 @@ product3Btn.addEventListener('click', function() {
 });
 
 
-//Lab Assignment #10
-var cardurl = cardimgurl247 + cardnumber + '.gif';
-// where cardnumber is 0 to 51 for a face up card and 52 for the back
-// insert cardurl into an img tag to display cards, DO NOT forget id='cardX'
-
-var cardnum779 = '-1';
-
-function hitCard870() {
-
-}
-
-function dealCards412() {
-
-}
-
-
+// Lab Assignment #10 - 12
 
 function makeLinkBar881() {
   let linkBar = document.querySelector('#linkbar');
@@ -119,3 +104,68 @@ function makeLinkBar881() {
 }
 
 makeLinkBar881();
+
+
+// Lab Assignment #13
+
+var adnum409 = 1;
+
+
+
+function popupAd536() {
+
+
+  var winobj373 = -1;
+  if(winobj373 < 2) {
+    winobj373++;
+  } else {
+    winobj373 = -1;
+  }
+
+
+  
+  var adContents = [
+  `
+    <html>
+    <head>
+      <title>Buy one get one free <3</title>
+    </head>
+    <body>
+      <h1>Get extra tunes for a great price!!</h1>
+      <p>(Offer ends June 31st)</p>
+    </body>
+    </html>
+  `,
+  `
+    <html>
+    <head>
+      <title>15% Off! If you refer a friend</title>
+    </head>
+    <body>
+      <h1>Send us screenshot of your purchase!</h1>
+      <p>Earn extra store credit</p>
+    </body>
+    </html>
+  `,
+  `
+    <html>
+    <head>
+      <title>Special Father's Day Sale</title>
+    </head>
+    <body>
+      <h1>50% off for all Dads</h1>
+      <p>(25% off gifts for dad's)</p>
+    </body>
+    </html>
+  `
+  ];
+
+var adWindow = window.open('', '_blank', 'width=500,height=400');
+adWindow.document.open();
+adWindow.document.write(adContents[winobj373]);
+adWindow.document.close();
+}
+
+function closeAd536() {
+  adWindow.document.close();
+}
