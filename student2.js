@@ -6,6 +6,10 @@ var imgurl797 = 'http://www.college1.com/images/';
 var cardimgurl247 = 'http://www.college1.com/images/cards/gbCard';
 var adnum409 = 1;
 var winobj373 = -1;
+var product4 = {};
+var product5 = {};
+var jsonobj4 = { "type":"dvdcd", "number":"1" };
+var jsonobj5 = { "type":"dvdcd", "number":"2" };
 
 // var product2 = { name: "Roland TR-808", id: "tr808", desc: "Legendary drum machine that revolutionized electronic music", img: "assets/drum_machine.jpg" };
 // var product3 = { name: "Technics SL-1200", id: "sl1200", desc: "Classic turntable known for its exceptional performance and durability", img: "assets/retro_turntable.jpg" };
