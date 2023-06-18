@@ -108,6 +108,10 @@ nav ul li a {
   background-color: #f25f4c;
 }
 
+#about-container p {
+  color: #333;
+  letter-spacing: .05em;
+}
 
 /* Products section styles */
 #products {

@@ -165,7 +165,7 @@ function closeAd536() {
 }
 
 
-// Lab Assignment #13
+// Lab Assignment #13 & 14
 function makeForm835() {
 
 }
@@ -238,3 +238,47 @@ function checkForm804() {
     // Form validation passed, submit the form
     return true;
 }
+
+
+// Lab Assignment #15
+
+var product4 = {};
+var product5 = {};
+var jsonobj4 = { "type":"dvdcd", "number":"1" };
+var jsonobj5 = { "type":"dvdcd", "number":"2" };
+
+function getProduct543(jsonobj) {
+  var server = 'http://www.college1.com/getproduct.php';
+  var jsonstr = JSON.stringify(jsonobj);
+  xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", server+"?jsonstr=" + jsonstr, true);
+  xmlhttp.send();
+
+  xmlhttp.onreadystatechange = function () {  
+    if (this.readyState == 4 && this.status == 200) {
+    replystr =  this.responseText;
+      if (product4 == null) {
+        product4 = JSON.parse(replystr);
+      }
+      else if (product5 == null) {
+        product5 = JSON.parse(replystr);
+      }
+      else
+        console.log('Error, no object variable available');
+    }
+  };
+}
+
+
+const product4Btn = document.getElementById('product4Btn');
+const product5Btn = document.getElementById('product5Btn');
+
+product4Btn.addEventListener('click', function() {
+  getProduct543(jsonobj4);
+  execButton453(product4);
+});
+
+product5Btn.addEventListener('click', function() {
+  getProduct543(jsonobj5);
+  execButton453(product5);
+});
