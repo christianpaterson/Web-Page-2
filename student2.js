@@ -4,8 +4,6 @@ var address4 = "269 Main St. Valencia, CA 91344";
 var phonenumber5 = "(555) 861-1234";
 var imgurl797 = 'http://www.college1.com/images/';
 var cardimgurl247 = 'http://www.college1.com/images/cards/gbCard';
-var adnum409 = 1;
-var winobj373 = -1;
 var product4 = {};
 var product5 = {};
 var jsonobj4 = { "type":"dvdcd", "number":"1" };
@@ -14,9 +12,9 @@ var jsonobj5 = { "type":"dvdcd", "number":"2" };
 // var product2 = { name: "Roland TR-808", id: "tr808", desc: "Legendary drum machine that revolutionized electronic music", img: "assets/drum_machine.jpg" };
 // var product3 = { name: "Technics SL-1200", id: "sl1200", desc: "Classic turntable known for its exceptional performance and durability", img: "assets/retro_turntable.jpg" };
 
-var product1 = { name: "Oldies CD Collection", id: "oldiescd", desc: "A curated collection of classic hits from the '50s and '60s", img: "assets/cds-side.jpg" };
-var product2 = { name: "Boombox", id: "boombox", desc: "Vintage-style portable stereo system with built-in speakers", img: "assets/boombox.jpg" };
-var product3 = { name: "VR Headset", id: "vrheadset", desc: "Cutting-edge virtual reality headset for immersive gaming and experiences", img: "assets/kid_headset_resized.jpg" };
+var product1 = { name: "Oldies CD Collection", id: "oldiescd", desc: "A curated collection of classic hits from the '50s and '60s, overflowing with melodies that stir the soul, beats that make you move, and unforgettable tunes that stand the test of time.", imagesrc: "assets/cds-side.jpg" };
+var product2 = { name: "Boombox", id: "boombox", desc: "Step into the rhythm of nostalgia with our vintage-inspired portable stereo system. This sleek and captivating retro boombox, adorned with built-in speakers, sets the stage for an immersive musical experience and invites unforgettable moments.", imagesrc: "assets/boombox.jpg" };
+var product3 = { name: "Old Televisions", id: "oldtvs", desc: "Fully restored vintage televisions with their iconic designs and authentic analog experience. These relics of timeless charm transport you back to a bygone era of enchanting family gatherings and captivating historic moments.", imagesrc: "assets/kids_tvs.jpg" };
 
 
 const headerContainer = document.getElementById('head269');
@@ -61,10 +59,10 @@ function makeMain2(myproduct) {
   
   mainContainer.innerHTML = `
     <h3>${myproduct.name}</h3><br>
-    <img src="${myproduct.img}" width="500">
+    <img src="${myproduct.imagesrc}" width="500"><br style="height: 30px;"><br>
+    <h4 style="width: 60%; margin: 0 auto; text-align: center;">${myproduct.desc}</h4><br>
+    <h5 style="display: block; margin: 0 auto; text-align: center;" id="linkbar"></h5>
     <h6>Product ID: ${myproduct.id}</h6>
-    <h5>Product Description: ${myproduct.desc}</h5>
-    <h5 id="linkbar"></h5><br>
   `;
   makeLinkBar881();
 }
@@ -100,7 +98,7 @@ function makeLinkBar881() {
       <input type='hidden' name='item_name' value=''>
       <input type='hidden' name='amount' value=’20’>
       <input type='hidden' name='currency_code' value='USD'>
-      <input id="add-to-cart" type='image' name='submit'
+      <input style="display: block; margin: 0 auto; text-align: center;" id="add-to-cart" type='image' name='submit'
         src='https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif'
         alt='Add to Cart'>
       <img alt='' width='1' height='1'
@@ -110,16 +108,15 @@ function makeLinkBar881() {
 }
 
 // Lab Assignment #13
-var adnum409 = 1;
-var winobj373 = -1;
+let adnum409 = 1;
+let winobj373 = 0;
 
 function popupAd536() {
 
-  var winobj373 = -1;
   if(winobj373 < 2) {
     winobj373++;
   } else {
-    winobj373 = -1;
+    winobj373 = 0;
   }
 
   var adContents = [
@@ -251,7 +248,7 @@ var product5 = {};
 var jsonobj4 = { "type":"dvdcd", "number":"1" };
 var jsonobj5 = { "type":"dvdcd", "number":"2" };
 
-function getProduct543(jsonobj) {
+function getProduct543(jsonobj, callback) {
   var server = 'http://www.college1.com/getproduct.php';
   var jsonstr = JSON.stringify(jsonobj);
   xmlhttp = new XMLHttpRequest();
@@ -267,22 +264,28 @@ function getProduct543(jsonobj) {
       else if (product5 == null) {
         product5 = JSON.parse(replystr);
       }
-      else
+      else {
         console.log('Error, no object variable available');
+      }
+      var parsedProduct = JSON.parse(replystr);
+      callback(parsedProduct);
     }
   };
 }
-
 
 const product4Btn = document.getElementById('product4Btn');
 const product5Btn = document.getElementById('product5Btn');
 
 product4Btn.addEventListener('click', function() {
-  getProduct543(jsonobj4);
-  execButton453(product4);
+  getProduct543(jsonobj4, function(product) {
+    product4 = product;
+    execButton453(product4);
+  });
 });
 
 product5Btn.addEventListener('click', function() {
-  getProduct543(jsonobj5);
-  execButton453(product5);
+  getProduct543(jsonobj5, function(product) {
+    product5 = product;
+    execButton453(product5);
+  });
 });

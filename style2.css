@@ -20,10 +20,6 @@ h1 {
   color: #f25f4c
 }
 
-/* .pop-up h1 {
-  color: black;
-} */
-
 h2 {
   color: #333;
 }
@@ -95,16 +91,15 @@ nav ul li a {
 
 /* About section styles */
 #about {
-  background-color: white;
-  height: 250px;
+  background-color: #ff8906;
+  display: flex;
 }
 
 #about-container {
-  height: 150px;
+
   max-width: 75%;
-  margin: auto;
+  margin: 20px auto;
   padding-top: 20px;
-  border: 2px solid #f25f4c;
   background-color: #f25f4c;
 }
 
@@ -118,17 +113,20 @@ nav ul li a {
   background: #0f0e17;
   padding: 100px 0;
   text-align: center;
-  
 }
 
-#outer-container {
-  max-height: 800px;
+#products-container {
+  max-height: 1200px;
   max-width: 80%;
   margin: auto;
   background-color: #f25f4c;
 }
 
-/* Contact section styles */
+img {
+  width: 75%;
+}
+
+/* Pop-up section styles */
 #pop-up {
     margin: 0 auto;
     text-align: center;
@@ -136,10 +134,21 @@ nav ul li a {
 }
 
 
+/* Break section styles */
+#break {
+  height: 50px;
+  background-color: #ccc;
+}
+
 /* Contact section styles */
 #contact {
-  background: #eee;
+  background: #ddd;
   padding: 10px 0;
+  text-align: center;
+}
+
+#contact-top {
+  background:#ff8906;
   text-align: center;
 }
 
@@ -149,6 +158,7 @@ form textarea {
   padding: 12px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
+  background-color:#f25f4c77;
   border-radius: 4px;
 }
 
