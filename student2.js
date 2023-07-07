@@ -2,8 +2,8 @@
 var companyname4 = "Echoes of Innovation DVDs";
 var address4 = "269 Main St. Valencia, CA 91344";
 var phonenumber5 = "(555) 861-1234";
-var imgurl797 = 'http://www.college1.com/images/';
-var cardimgurl247 = 'http://www.college1.com/images/cards/gbCard';
+var imgurl797 = 'https://www.college1.com/images/';
+var cardimgurl247 = 'https://www.college1.com/images/cards/gbCard';
 var product4 = {};
 var product5 = {};
 var jsonobj4 = { "type":"dvdcd", "number":"1" };
@@ -179,7 +179,7 @@ form.addEventListener('submit', function(event) {
   if (checkForm804()) {
     var formData = new FormData(form);
     
-    fetch("http://www.college1.com/classes/javascript/survey.php", {
+    fetch("https://www.college1.com/classes/javascript/survey.php", {
       method: "POST",
       body: formData
     })
@@ -249,7 +249,7 @@ var jsonobj4 = { "type":"dvdcd", "number":"1" };
 var jsonobj5 = { "type":"dvdcd", "number":"2" };
 
 function getProduct543(jsonobj, callback) {
-  var server = 'http://www.college1.com/getproduct.php';
+  var server = 'https://www.college1.com/getproduct.php';
   var jsonstr = JSON.stringify(jsonobj);
   xmlhttp = new XMLHttpRequest();
   xmlhttp.open("GET", server+"?jsonstr=" + jsonstr, true);
