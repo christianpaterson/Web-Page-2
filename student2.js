@@ -13,8 +13,8 @@ var jsonobj5 = { "type":"dvdcd", "number":"2" };
 // var product3 = { name: "Technics SL-1200", id: "sl1200", desc: "Classic turntable known for its exceptional performance and durability", img: "assets/retro_turntable.jpg" };
 
 var product1 = { name: "Oldies CD Collection", id: "oldiescd", desc: "A curated collection of classic hits from the '50s and '60s, overflowing with melodies that stir the soul, beats that make you move, and unforgettable tunes that stand the test of time.", imagesrc: "assets/cds-side.jpg" };
-var product2 = { name: "Boombox", id: "boombox", desc: "Step into the rhythm of nostalgia with our vintage-inspired portable stereo system. This sleek and captivating retro boombox, adorned with built-in speakers, sets the stage for an immersive musical experience and invites unforgettable moments.", imagesrc: "assets/boombox.jpg" };
-var product3 = { name: "Old Televisions", id: "oldtvs", desc: "Fully restored vintage televisions with their iconic designs and authentic analog experience. These relics of timeless charm transport you back to a bygone era of enchanting family gatherings and captivating historic moments.", imagesrc: "assets/kids_tvs.jpg" };
+var product2 = { name: "Boombox", id: "boombox", desc: "Blast your new favorite CDs with our vintage-inspired portable stereo system. This sleek and captivating retro boombox, adorned with built-in speakers, sets the stage for an immersive musical experience and invites unforgettable moments.", imagesrc: "assets/boombox.jpg" };
+var product3 = { name: "Old Televisions", id: "oldtvs", desc: "Watch your DVDs in style. Fully restored vintage televisions with their iconic designs and authentic analog experience. These relics of timeless charm transport you back to a bygone era of enchanting family gatherings and captivating historic moments.", imagesrc: "assets/kids_tvs.jpg" };
 
 
 const headerContainer = document.getElementById('head269');
